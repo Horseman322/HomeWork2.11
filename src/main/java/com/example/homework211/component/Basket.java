@@ -1,6 +1,7 @@
 package com.example.homework211.component;
 
 
+import com.example.homework211.model.items;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -12,16 +13,16 @@ import java.util.List;
 @SessionScope
 public class Basket {
 
-    private final List<com.example.homework211.model.Items> Items;
+    private final List<items> items;
 
     public Basket() {
-        this.Items = new ArrayList<>();
+        this.items = new ArrayList<>();
     }
 
-    public void add(List<com.example.homework211.model.Items> Items){
-        this.Items.addAll(Items);
+    public void add(List<com.example.homework211.model.items> items){
+        this.items.addAll(items);
     }
-    public List<com.example.homework211.model.Items> get(){
-        return Collections.unmodifiableList(Items);
+    public List<items> get(){
+        return Collections.unmodifiableList(items);
     }
 }

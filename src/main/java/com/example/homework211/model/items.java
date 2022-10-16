@@ -1,12 +1,12 @@
 package com.example.homework211.model;
 
-public class Items {
+public class items {
 
     private final int id;
     private final String title;
     private final double price;
 
-    public Items(int id, String title, double price) {
+    public items(int id, String title, double price) {
         this.id = id;
         this.title = title;
         this.price = price;
@@ -23,4 +23,7 @@ public class Items {
     public double getPrice() {
         return price;
     }
+
+
+
 }
