@@ -1,12 +1,12 @@
 package com.example.homework211.model;
 
-public class Item {
+public class Items {
 
     private final int id;
     private final String title;
     private final double price;
 
-    public Item(int id, String title, double price) {
+    public Items(int id, String title, double price) {
         this.id = id;
         this.title = title;
         this.price = price;

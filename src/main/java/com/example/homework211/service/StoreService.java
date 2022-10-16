@@ -1,7 +1,7 @@
 package com.example.homework211.service;
 
 import com.example.homework211.component.Basket;
-import com.example.homework211.model.Item;
+import com.example.homework211.model.Items;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,14 +13,14 @@ import java.util.stream.Collectors;
 public class StoreService {
 
     private final Basket basket;
-    private final Map<Integer, Item> Items;
+    private final Map<Integer, com.example.homework211.model.Items> Items;
 
     public StoreService(Basket basket) {
         this.basket = basket;
         this.Items = Map.of(
-                1,new Item(1, "Книга", 60),
-                1,new Item(1, "Зажигалка", 10),
-                1,new Item(1, "Монитор", 5000)
+                1,new Items(1, "Книга", 60),
+                1,new Items(2, "Зажигалка", 10),
+                1,new Items(3, "Монитор", 5000)
         );
     }
 
@@ -33,7 +33,7 @@ public class StoreService {
         );
     }
 
-    public List<Item> get() {
+    public List<com.example.homework211.model.Items> get() {
         return basket.get();
     }
 }

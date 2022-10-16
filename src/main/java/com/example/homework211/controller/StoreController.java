@@ -1,6 +1,6 @@
 package com.example.homework211.controller;
 
-import com.example.homework211.model.Item;
+import com.example.homework211.model.Items;
 import com.example.homework211.service.StoreService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +24,7 @@ public class StoreController {
     }
 
     @GetMapping("/get")
-    public List<Item> get(){
+    public List<Items> get(){
         return storeService.get();
     }
 
